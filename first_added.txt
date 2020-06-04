@@ -1,2 +1,5 @@
+<<<<<<< HEAD
 1) Juanito Empezo
+2) Pepita Inició
+3) Pepita Terminó
 4) Juanito Termnio
