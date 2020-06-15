@@ -50,5 +50,5 @@ fun calcularSueldo( sueldo: Double, tasa: Double = 12.00, // Tiene valor defecto
 
 
 fun imprimirMensaje() { // Unit = Void
-    println("")
+    println("Hola Kotlin")
 }
