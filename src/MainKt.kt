@@ -1,5 +1,4 @@
 import java.util.*
-import java.util.function.Consumer
 import kotlin.collections.ArrayList
 
 fun main(args: Array<String>) {
@@ -90,7 +89,7 @@ fun main(args: Array<String>) {
         .map { iterador: Int ->
             iterador * -1
         }
-    val respuestaMapDos= arregloCumpleanos
+    val respuestaMapDos = arregloCumpleanos
         .map { iterador: Int ->
             val nuevoValor = iterador * -1
             val otroValor = nuevoValor * 2
@@ -104,14 +103,13 @@ fun main(args: Array<String>) {
     // 1) Devolver una expresion (TRUE o FALSE)
     // 2) Nuevo arreglo que cumpla esa expresion
     val respuestaFilter = arregloCumpleanos
-        .filter {
-                iteracion:Int ->
+        .filter { iteracion: Int ->
             val esMayorA23 = iteracion > 23
             return@filter esMayorA23
         }
     arregloCumpleanos
-        .filter {
-                iteracion:Int -> iteracion > 23
+        .filter { iteracion: Int ->
+            iteracion > 23
         }
     println(respuestaFilter)
     println(arregloCumpleanos)
@@ -119,29 +117,29 @@ fun main(args: Array<String>) {
     //Any -> OR
     //ALL -> AND
     // no devuelve un arreglo
-    val respuestaAny:Boolean = arregloCumpleanos.any {
-        itera:Int ->
+    val respuestaAny: Boolean = arregloCumpleanos
+            .any { itera: Int ->
         return@any itera > 25
     }
     print("\nRespuesta any ")
     print(respuestaAny)
 
-    val respuestaAll:Boolean = arregloCumpleanos.all {
-        itera:Int ->
+    val respuestaAll: Boolean = arregloCumpleanos
+            .all { itera: Int ->
         return@all itera < 65
     }
     print("\nrespuesta all ")
     print(respuestaAll)
 
-    val respuestaReduce:Int = arregloCumpleanos.reduce{
-        acumulador,iteracion ->
-        return@reduce acumulador+iteracion
+    val respuestaReduce: Int = arregloCumpleanos
+            .reduce { acumulador, iteracion ->
+        return@reduce acumulador + iteracion
     }
 
     print("\nrespuesta reduce ")
     print(respuestaReduce)
 
-    val respuestaFold:Int = arregloCumpleanos
+    val respuestaFold: Int = arregloCumpleanos
         .fold(
             100,
             { acumulador, iteracion ->
@@ -149,17 +147,32 @@ fun main(args: Array<String>) {
             }
         )
 
-    print("\nrespuesta reduce ")
-    print(respuestaReduce)
+    print("\nrespuesta fold ")
+    print(respuestaFold)
 
-    val vidaAcutal:Double = arregloCumpleanos.map{it * 0.8}
-        .filter {it > 18}
+    val vidaAcutal: Double = arregloCumpleanos.map { it * 0.8 }
+        .filter { it > 18 }
         .fold(
-            100.00,{
-            acc, d -> acc-d}
-        )
+            100.00, { acc, d -> acc - d }
+        ).also {
+            print("\n")
+            println(it)
+        }
 
-    println(vidaAcutal)
+    val nuevoNum1 = SumarDosNumeros( 1, 2)
+    val nuevoNum2 = SumarDosNumeros(null, 2)
+    val nuevoNum3 = SumarDosNumeros(1, null)
+    val nuevoNum4 = SumarDosNumeros(null, null)
+
+    println(SumarDosNumeros.arreglo)
+    SumarDosNumeros.agregarNumero(1)
+    println(SumarDosNumeros.arreglo)
+    SumarDosNumeros.eliminarNumer(0)
+    println(SumarDosNumeros.arreglo)
+
+
+
+
 }
 
 fun calcularSueldo(
@@ -177,4 +190,49 @@ fun calcularSueldo(
 
 fun imprimirMensaje() { // Unit = Void
     println("")
+}
+
+
+
+
+//Clase Abstracta
+abstract class Numeros(
+    protected var numero1:Int,
+    protected var numero2:Int){
+
+}
+
+
+class SumarDosNumeros(uno:Int, dos:Int):Numeros(uno, dos){
+
+    constructor(uno:Int?, dos:Int):this(
+            if (uno == null) 0 else uno,
+            dos
+    ){
+        println("hola1")
+    }
+    constructor(uno:Int, dos:Int?):this(
+            uno ,if (dos == null) 0 else dos
+    ){
+        println("hola2")
+    }
+    constructor(uno:Int?, dos:Int?):this(
+            if (uno == null) 0 else uno,
+            if (dos == null) 0 else dos
+    )
+    {
+        println("hola3")
+    }
+
+    companion object{
+        val arreglo = arrayListOf(1,2,3,4,5)
+        fun agregarNumero(nuevoNum:Int){
+            this.arreglo.add(nuevoNum)
+        }
+        fun eliminarNumer(index:Int){
+            this.arreglo.removeAt(index)
+        }
+
+    }
+
 }
