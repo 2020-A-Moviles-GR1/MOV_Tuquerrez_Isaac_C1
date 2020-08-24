@@ -744,12 +744,15 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id button_acpetar
 id button_add
 id button_add_trainer
+id button_cancel
 id button_go_sa
 id button_go_tintent
 id button_implicit
 id button_listview
+id button_respuesta_propia
 id button_return
 id center_vertical
 id chains

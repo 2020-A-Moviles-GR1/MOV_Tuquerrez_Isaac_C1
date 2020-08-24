@@ -1,4 +1,4 @@
-#Mon Aug 24 08:32:19 ECT 2020
+#Mon Aug 24 10:31:57 ECT 2020
 base.0=/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

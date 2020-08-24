@@ -1,5 +1,6 @@
 package com.example.my_app_isaac
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -27,6 +28,11 @@ class MainActivity : AppCompatActivity() {
         button_implicit.setOnClickListener{
             go_intent_respuesta()
         }
+
+        button_respuesta_propia.setOnClickListener {
+            go_repsuesta_propia()
+        }
+
     }
 
     fun go_second_activity() {
@@ -62,6 +68,47 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(intentconRespuesta, 304)
     }
 
+    fun go_repsuesta_propia(){
+        val intentconRespuesta = Intent(
+            this,
+            Intent_send_parameters::class.java
+        )
+        startActivityForResult(intentconRespuesta, 305)
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        Log.i("resultado","$resultCode")
+        when(resultCode){
+            RESULT_CANCELED -> {
+                Log.i("resultado", "Sorry")
+            }
+            -1 -> { //304 request code
+                val uri = data?.data
+                if (uri!=null){
+                    val cursor = contentResolver.query(uri, null, null,
+                        null, null, null
+                    )
+                    cursor?.moveToFirst()
+                    val indiceTelefono = cursor?.getColumnIndex(
+                        ContactsContract.CommonDataKinds.Phone.NUMBER
+                    )
+                    val telefono = cursor?.getString(indiceTelefono!!)
+                    cursor?.close()
+                    Log.i("resultado", "telefono: ${telefono}")
+                }
+            }
+            /*-1 -> {
+                if(data!=null){
+                    val nombre = data.getStringExtra("nombre")
+                    val edad = data.getIntExtra("edad",0)
+                    Log.i("resultado", "$nombre, $edad")
+                }
+            }*/
+
+
+
+        }
+    }
 
 }

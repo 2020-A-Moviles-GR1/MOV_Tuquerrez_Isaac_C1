@@ -71,4 +71,17 @@
         app:layout_constraintTop_toBottomOf="@+id/button_go_tintent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/button_respuesta_propia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Respuesta propia"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_implicit"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
