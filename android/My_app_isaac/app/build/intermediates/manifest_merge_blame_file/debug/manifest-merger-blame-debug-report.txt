@@ -11,7 +11,7 @@
 9-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:5:5-21:19
+11-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:5:5-28:19
 12        android:allowBackup="true"
 12-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,26 +28,44 @@
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
 20-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:11:9-40
-21        <activity android:name="com.example.my_app_isaac.List_view_activity" />
-21-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:12:9-65
-21-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:12:19-53
-22        <activity android:name="com.example.my_app_isaac.Second_Activity" />
-22-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:13:9-53
-22-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:13:19-50
-23        <activity android:name="com.example.my_app_isaac.MainActivity" >
-23-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:14:9-20:20
-23-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:14:19-47
-24            <intent-filter>
-24-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:15:13-19:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:16:17-69
-25-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:16:25-66
+21        <activity android:name="com.example.my_app_isaac.Intent_send_parameters" >
+21-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:12:9-18:20
+21-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:12:19-57
+22            <intent-filter>
+22-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:13:13-17:29
+23                <action android:name="android.intent.action.SEND" />
+23-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:14:17-68
+23-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:14:25-66
+24
+25                <category android:name="android.intent.category.DEFAULT" />
+25-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:15:17-75
+25-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:15:27-73
 26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:18:17-77
-27-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:18:27-74
+27                <data android:mimeType="text/plain" />
+27-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:16:17-54
+27-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:16:23-52
 28            </intent-filter>
 29        </activity>
-30    </application>
-31
-32</manifest>
+30        <activity android:name="com.example.my_app_isaac.List_view_activity" />
+30-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:19:9-56
+30-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:19:19-53
+31        <activity android:name="com.example.my_app_isaac.Second_Activity" />
+31-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:20:9-53
+31-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:20:19-50
+32        <activity android:name="com.example.my_app_isaac.MainActivity" >
+32-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:21:9-27:20
+32-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:21:19-47
+33            <intent-filter>
+33-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:22:13-26:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:23:17-69
+34-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:23:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:25:17-77
+36-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:25:27-74
+37            </intent-filter>
+38        </activity>
+39    </application>
+40
+41</manifest>

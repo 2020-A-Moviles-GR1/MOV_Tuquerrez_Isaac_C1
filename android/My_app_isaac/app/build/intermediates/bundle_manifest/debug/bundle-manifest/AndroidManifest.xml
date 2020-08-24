@@ -18,6 +18,15 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.my_app_isaac.Intent_send_parameters" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.example.my_app_isaac.List_view_activity" />
         <activity android:name="com.example.my_app_isaac.Second_Activity" />
         <activity android:name="com.example.my_app_isaac.MainActivity" >
