@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity() {
             go_repsuesta_propia()
         }
 
+        button_http.setOnClickListener {
+            go_intent_http()
+        }
     }
 
     fun go_second_activity() {
@@ -57,6 +61,20 @@ class MainActivity : AppCompatActivity() {
             Intent_send_parameters::class.java
         )
         intentExplicito.putExtra("numero", 2)
+        val adrian = Usuario(
+            "ISaac",
+            23,
+            Date(),
+            1.0
+        )
+        val cachetes = Mascota(
+            "Manchas",
+            adrian
+        )
+        val arregloMascotas = arrayListOf<Mascota>(cachetes)
+
+        intentExplicito.putExtra("cachetes", cachetes)
+        intentExplicito.putExtra("arregloMascotas", arregloMascotas)
         startActivity(intentExplicito)
     }
 
@@ -79,36 +97,51 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         Log.i("resultado","$resultCode")
-        when(resultCode){
+        when (resultCode) {//resultcode
+            RESULT_OK -> {
+                Log.i("resultado", "OK")
+                when (requestCode) { //request code -> puesto por nosotros
+                    304 -> { // Contactos
+                        val uri = data?.data
+                        if (uri != null) {
+                            val cursor = contentResolver.query(
+                                uri,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            )
+                            cursor?.moveToFirst()
+                            val indiceTelefono = cursor?.getColumnIndex(
+                                ContactsContract.CommonDataKinds.Phone.NUMBER
+                            )
+                            val telefono = cursor?.getString(indiceTelefono!!)
+                            cursor?.close()
+                            Log.i("resultado", "Telefono: ${telefono}")
+                        }
+                    }
+                    305 -> {
+                        if (data != null) {
+                            val nombre = data.getStringExtra("nombre")
+                            val edad = data.getIntExtra("edad", 0)
+                            Log.i("resultado", "Nombre: ${nombre} Edad: ${edad}")
+                        }
+                    }
+                }
+            }
             RESULT_CANCELED -> {
-                Log.i("resultado", "Sorry")
+                Log.i("resultado", "=(")
             }
-            -1 -> { //304 request code
-                val uri = data?.data
-                if (uri!=null){
-                    val cursor = contentResolver.query(uri, null, null,
-                        null, null, null
-                    )
-                    cursor?.moveToFirst()
-                    val indiceTelefono = cursor?.getColumnIndex(
-                        ContactsContract.CommonDataKinds.Phone.NUMBER
-                    )
-                    val telefono = cursor?.getString(indiceTelefono!!)
-                    cursor?.close()
-                    Log.i("resultado", "telefono: ${telefono}")
-                }
-            }
-            /*-1 -> {
-                if(data!=null){
-                    val nombre = data.getStringExtra("nombre")
-                    val edad = data.getIntExtra("edad",0)
-                    Log.i("resultado", "$nombre, $edad")
-                }
-            }*/
-
-
-
         }
+    }
+
+    fun go_intent_http(){
+        val intentHttp = Intent(
+            this,
+            ActividadHttp::class.java
+        )
+        startActivity(intentHttp)
     }
 
 }

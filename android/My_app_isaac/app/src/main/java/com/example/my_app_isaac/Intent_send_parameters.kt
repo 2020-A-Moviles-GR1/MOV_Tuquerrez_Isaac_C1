@@ -17,7 +17,7 @@ class Intent_send_parameters : AppCompatActivity() {
 
         Log.i("intents", "el numero encontrado es $numeroEncontrado")
 
-        tv_param_recivied.text = "Parametro Recivido: $numeroEncontrado"
+        tv_param_recivied.text = "Parametro Recibido: $numeroEncontrado"
         //Propiedad de la clase llamada intent
 
         this.button_return.setOnClickListener {
@@ -30,6 +30,20 @@ class Intent_send_parameters : AppCompatActivity() {
             tv_shared.text="Texto compartido $txt_shared"
         }
 
+        val cachetes = intent.getParcelableExtra<Mascota>("cachetes")
+        if(cachetes != null){
+            Log.i("parcelable", "${cachetes.nombre} ${cachetes.duenio?.nombre}")
+        }
+
+        val arregloMascotas = intent.getParcelableArrayListExtra<Mascota>("arregloMascotas")
+        if(arregloMascotas != null){
+            arregloMascotas.forEach {
+                Log.i("parcelable", "EN ARREGLO")
+                Log.i("parcelable", "${cachetes?.nombre} ${cachetes?.duenio?.nombre}")
+            }
+
+        }
+
         button_acpetar.setOnClickListener {
             val nombre="Hola a todos"
             val edad=31
@@ -37,14 +51,14 @@ class Intent_send_parameters : AppCompatActivity() {
             intentconRespuesta.putExtra("nombre", nombre)
             intentconRespuesta.putExtra("edad", edad)
             setResult(
-                Activity.RESULT_OK, intentconRespuesta
+                RESULT_OK, intentconRespuesta
             )
             finish()
         }
         button_cancel.setOnClickListener {
             val intenCancelado = Intent()
             setResult(
-                Activity.RESULT_CANCELED, intenCancelado
+                RESULT_CANCELED, intenCancelado
             )
             finish()
         }

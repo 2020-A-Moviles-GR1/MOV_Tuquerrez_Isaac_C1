@@ -748,8 +748,11 @@ id button_acpetar
 id button_add
 id button_add_trainer
 id button_cancel
+id button_crear
+id button_get
 id button_go_sa
 id button_go_tintent
+id button_http
 id button_implicit
 id button_listview
 id button_respuesta_propia
@@ -914,6 +917,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_actividad_http
 layout activity_intent_send_parameters
 layout activity_list_view_activity
 layout activity_main
