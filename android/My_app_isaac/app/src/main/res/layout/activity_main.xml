@@ -97,4 +97,16 @@
         app:layout_constraintTop_toBottomOf="@+id/button_respuesta_propia"
         app:layout_constraintVertical_bias="0.035" />
 
+    <Button
+        android:id="@+id/button_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recycler"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_http"
+        app:layout_constraintVertical_bias="0.192" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

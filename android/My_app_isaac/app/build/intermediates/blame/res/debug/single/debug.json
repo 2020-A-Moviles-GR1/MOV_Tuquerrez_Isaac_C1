@@ -56,6 +56,10 @@
         "source": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/intermediates/res/merged/debug/layout_activity_recycler.xml.flat",
+        "source": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/res/layout/activity_recycler.xml"
+    },
+    {
         "merged": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/intermediates/res/merged/debug/layout_activity_intent_send_parameters.xml.flat",
         "source": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/res/layout/activity_intent_send_parameters.xml"
     },
@@ -90,6 +94,10 @@
     {
         "merged": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/intermediates/res/merged/debug/layout_adapatador_persona.xml.flat",
+        "source": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/res/layout/adapatador_persona.xml"
     },
     {
         "merged": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",

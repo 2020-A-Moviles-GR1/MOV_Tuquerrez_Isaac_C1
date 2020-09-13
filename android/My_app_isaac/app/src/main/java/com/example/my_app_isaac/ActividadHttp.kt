@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 import kotlinx.android.synthetic.main.activity_actividad_http.*
 import kotlinx.android.synthetic.main.activity_main.*
 import com.github.kittinunf.result.Result
@@ -17,6 +18,14 @@ class ActividadHttp : AppCompatActivity() {
 
         button_get.setOnClickListener {
             get_users()
+        }
+
+        button_crear.setOnClickListener {
+            create_user()
+        }
+
+        button_pokemon.setOnClickListener {
+            getPokemon()
         }
 
     }
@@ -44,8 +53,8 @@ class ActividadHttp : AppCompatActivity() {
                     val usuarios = Klaxon().parseArray<UsuarioHttp>(data)
                     usuarios?.forEach {
                         Log.i("http-klaxon","Nombre: ${it.nombre}, ${it.estadoCivil}")
-                        if(it.pokemons.size >0){
-                            it.pokemons.forEach{
+                        if(it.pokemons?.size!! > 0){
+                            it.pokemons?.forEach{
                                 Log.i("http-klaxon","Pokemon: ${it.nombre}")
 
                             }
@@ -59,4 +68,55 @@ class ActividadHttp : AppCompatActivity() {
             }
         }
     }
+
+    fun create_user(){
+        val url = urlPrincipal + "Usuario"
+        val parametrosUser = listOf(
+            "cedula" to "1104120233",
+            "nombre" to "Willan",
+            "email" to "willantuquerrez@epn.com",
+            "estadoCivil" to "soltero",
+            "password" to "hjk3GgjJJ"
+        )
+        url.httpPost(parametrosUser).responseString {
+            request, response, result ->
+            when(result){
+                is Result.Failure -> {
+                    val error = result.getException()
+                    Log.i("http-klaxon","Error: $error")
+                }
+                is Result.Success -> {
+                    val userString=result.get()
+                    Log.i("http-klaxon", "USer: $userString")
+                }
+            }
+        }
+    }
+
+    fun getPokemon() {
+        val url: String = urlPrincipal + "Pokemon"
+        url.httpGet()
+            .responseString { request, response, result ->
+                when (result) {
+                    is Result.Success -> {
+                        val data = result.get()
+                        Log.i("http-klaxon", "Data: ${data}")
+                        val pokemons = Klaxon()
+                            .converter(PokemonHttp.conversorPokemon).parseArray<PokemonHttp>(data)
+                        if (pokemons != null) {
+                            pokemons.forEach {
+                                Log.i("http-klaxon", "Pokemon: ${it}")
+
+                            }
+                        }
+                    }
+                    is Result.Failure -> {
+                        val ex = result.getException()
+                        Log.i("http-klaxon", "Mi error es: ${ex.message}")
+                    }
+                }
+
+            }
+    }
+
 }

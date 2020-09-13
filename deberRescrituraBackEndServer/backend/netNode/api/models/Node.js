@@ -12,29 +12,17 @@ module.exports = {
     index:{
       type:'number',
       required:true,
-      unique:true
+      unique:false
     },
     
-    nombre:{
+    name:{
       type:'string',
       required:true,
       unique:false
     },
 
-    floatData:{
-      type:'number',
-      required:true,
-      unique:false
-    },
-
-    doubleData:{
-      type:'number',
-      required:true,
-      unique:false
-    },
-
-    booleanData:{
-      type:'boolean',
+    myData:{
+      type:'string',
       required:true,
       unique:false
     },

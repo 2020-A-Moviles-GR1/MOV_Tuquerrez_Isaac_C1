@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -37,6 +38,11 @@ class MainActivity : AppCompatActivity() {
         button_http.setOnClickListener {
             go_intent_http()
         }
+
+        button_recycler.setOnClickListener {
+            go_recycler()
+        }
+
     }
 
     fun go_second_activity() {
@@ -142,6 +148,14 @@ class MainActivity : AppCompatActivity() {
             ActividadHttp::class.java
         )
         startActivity(intentHttp)
+    }
+
+    fun go_recycler(){
+        val intentRecycler = Intent(
+            this,
+            RecyclerView::class.java
+        )
+        startActivity(intentRecycler)
     }
 
 }
