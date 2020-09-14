@@ -1,0 +1,4 @@
+#Sun Sep 13 18:24:53 ECT 2020
+base.0=/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

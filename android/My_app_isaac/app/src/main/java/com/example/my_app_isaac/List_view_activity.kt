@@ -44,7 +44,7 @@ class List_view_activity : AppCompatActivity() {
         lista_e : ArrayList<Entrenador>
     ){
         lista_e.add(Entrenador("AddNombre${count_trainer}", "AddApellido${count_trainer}"))
-        adapter.notifyDataSetChanged()
+        adapter.notifyDataSetChanged()//notifica el cambio de la actividad
     }
 
 
