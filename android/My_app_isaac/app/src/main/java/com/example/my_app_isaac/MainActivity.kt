@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity() {
             go_recycler()
         }
 
+        button_map.setOnClickListener {
+            go_mapa()
+        }
     }
 
     fun go_second_activity() {
@@ -153,9 +156,17 @@ class MainActivity : AppCompatActivity() {
     fun go_recycler(){
         val intentRecycler = Intent(
             this,
-            RecyclerView::class.java
+            Recycler::class.java
         )
         startActivity(intentRecycler)
+    }
+
+    fun go_mapa(){
+        val intentHttp = Intent(
+            this,
+            MapsActivity::class.java
+        )
+        startActivity(intentHttp)
     }
 
 }

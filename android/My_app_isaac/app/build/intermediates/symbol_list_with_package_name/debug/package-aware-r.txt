@@ -850,6 +850,7 @@ id button_go_tintent
 id button_http
 id button_implicit
 id button_listview
+id button_map
 id button_pokemon
 id button_recycler
 id button_respuesta_propia
@@ -908,6 +909,7 @@ id line3
 id listMode
 id list_item
 id lv_numeros
+id map
 id media_actions
 id message
 id middle
@@ -978,6 +980,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
+id textViewLikes
 id time
 id title
 id titleDividerNoCustom
@@ -1042,6 +1045,8 @@ layout activity_actividad_http
 layout activity_intent_send_parameters
 layout activity_list_view_activity
 layout activity_main
+layout activity_maps
+layout activity_maps2
 layout activity_recycler
 layout activity_second_
 layout adapatador_persona
@@ -1113,8 +1118,10 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string google_maps_key
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_maps
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

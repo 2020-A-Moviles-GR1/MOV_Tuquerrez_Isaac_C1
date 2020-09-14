@@ -93,6 +93,7 @@ class ActividadHttp : AppCompatActivity() {
         }
     }
 
+
     fun getPokemon() {
         val url: String = urlPrincipal + "Pokemon"
         url.httpGet()

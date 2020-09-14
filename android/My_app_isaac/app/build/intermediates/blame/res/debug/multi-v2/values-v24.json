@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/home/isaac/.gradle/caches/transforms-2/files-2.1/7d26c1198e9e9b91c6c8304fbdc008ea/media-1.0.0/res/values-v24/values-v24.xml",

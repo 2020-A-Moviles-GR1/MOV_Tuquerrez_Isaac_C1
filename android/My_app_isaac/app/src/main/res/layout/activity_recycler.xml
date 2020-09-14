@@ -20,8 +20,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_usuarios"
-        android:layout_width="353dp"
-        android:layout_height="194dp"
+        android:layout_width="231dp"
+        android:layout_height="578dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

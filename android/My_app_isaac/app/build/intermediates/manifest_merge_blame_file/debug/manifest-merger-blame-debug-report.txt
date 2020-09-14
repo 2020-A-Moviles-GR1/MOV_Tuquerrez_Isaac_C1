@@ -6,114 +6,151 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml
+8-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml
+9-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml
 10
-11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:5:5-67
-11-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:5:22-64
-12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:6:5-79
-12-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:6:22-76
-13
-14    <uses-feature
-14-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
-15        android:glEsVersion="0x00020000"
-15-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
-16        android:required="true" />
-16-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
-17
-18    <application
-18-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:8:5-34:19
-19        android:allowBackup="true"
-19-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:9:9-35
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.1.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/ddc4d5d5d8ba7442d59e0399238a2056/core-1.1.0/AndroidManifest.xml:24:18-86
-21        android:debuggable="true"
-22        android:icon="@mipmap/ic_launcher"
-22-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:10:9-43
-23        android:label="@string/app_name"
-23-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:11:9-41
-24        android:roundIcon="@mipmap/ic_launcher_round"
-24-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:12:9-54
-25        android:supportsRtl="true"
-25-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:13:9-35
-26        android:testOnly="true"
-27        android:theme="@style/AppTheme"
-27-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:14:9-40
-28        android:usesCleartextTraffic="true" >
-28-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:15:9-44
-29        <activity android:name="com.example.my_app_isaac.Recycler" />
-29-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:16:9-45
-29-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:16:19-43
-30        <activity android:name="com.example.my_app_isaac.ActividadHttp" />
-30-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:17:9-51
-30-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:17:19-48
-31        <activity android:name="com.example.my_app_isaac.Intent_send_parameters" >
-31-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:18:9-25:20
-31-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:18:19-57
-32            <intent-filter>
-32-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:19:13-24:29
-33                <action android:name="android.intent.action.SEND" />
-33-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:20:17-69
-33-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:20:25-66
-34                <action android:name="android.intent.action.ANSWER" />
-34-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:21:17-71
-34-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:21:25-68
-35
-36                <category android:name="android.intent.category.DEFAULT" />
-36-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:22:17-76
-36-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:22:27-73
-37
-38                <data android:mimeType="text/plain" />
-38-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:23:17-55
-38-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:23:23-52
-39            </intent-filter>
-40        </activity>
-41        <activity android:name="com.example.my_app_isaac.List_view_activity" />
-41-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:26:9-56
-41-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:26:19-53
-42        <activity android:name="com.example.my_app_isaac.Second_Activity" />
-42-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:27:9-53
-42-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:27:19-50
-43        <activity android:name="com.example.my_app_isaac.MainActivity" >
-43-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:28:9-33:20
-43-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:28:19-47
-44            <intent-filter>
-44-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:29:13-32:29
-45                <action android:name="android.intent.action.MAIN" />
-45-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:30:17-69
-45-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:30:25-66
-46
-47                <category android:name="android.intent.category.LAUNCHER" />
-47-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:31:17-77
-47-->/home/isaac/AndroidStudioProjects/My_app_isaac/app/src/main/AndroidManifest.xml:31:27-74
-48            </intent-filter>
-49        </activity>
-50        <!-- Needs to be explicitly declared on P+ -->
-51        <uses-library
-51-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
-52            android:name="org.apache.http.legacy"
-52-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
-53            android:required="false" />
-53-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
-54
-55        <activity
-55-->[com.google.android.gms:play-services-base:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/548e9fe7c0dbc0938b6828b2531865ee/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-56            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-56-->[com.google.android.gms:play-services-base:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/548e9fe7c0dbc0938b6828b2531865ee/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-57            android:exported="false"
-57-->[com.google.android.gms:play-services-base:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/548e9fe7c0dbc0938b6828b2531865ee/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-58            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-58-->[com.google.android.gms:play-services-base:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/548e9fe7c0dbc0938b6828b2531865ee/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-59
-60        <meta-data
-60-->[com.google.android.gms:play-services-basement:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/1b90b1be4df66705fb91818db0752e78/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-61            android:name="com.google.android.gms.version"
-61-->[com.google.android.gms:play-services-basement:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/1b90b1be4df66705fb91818db0752e78/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-62            android:value="@integer/google_play_services_version" />
-62-->[com.google.android.gms:play-services-basement:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/1b90b1be4df66705fb91818db0752e78/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-63    </application>
-64
-65</manifest>
+11    <!--
+12         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+13         Google Maps Android API v2, but you must specify either coarse or fine
+14         location permissions for the "MyLocation" functionality.
+15    -->
+16    <uses-feature
+16-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:10:5-90
+17        android:name="android.hardware.location.gps"
+17-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:10:19-63
+18        android:required="false" />
+18-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:10:64-88
+19
+20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+20-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:11:5-79
+20-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:11:22-76
+21    <uses-permission android:name="android.permission.INTERNET" />
+21-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:12:5-67
+21-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:12:22-64
+22    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+22-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:13:5-79
+22-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:13:22-76
+23
+24    <uses-feature
+24-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+25        android:glEsVersion="0x00020000"
+25-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+26        android:required="true" />
+26-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+27
+28    <application
+28-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:15:5-60:19
+29        android:allowBackup="true"
+29-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:16:9-35
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.1.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/ddc4d5d5d8ba7442d59e0399238a2056/core-1.1.0/AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:17:9-43
+33        android:label="@string/app_name"
+33-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:18:9-41
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:19:9-54
+35        android:supportsRtl="true"
+35-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:20:9-35
+36        android:testOnly="true"
+37        android:theme="@style/AppTheme"
+37-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:21:9-40
+38        android:usesCleartextTraffic="true" >
+38-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:22:9-44
+39
+40        <!--
+41             The API key for Google Maps-based APIs is defined as a string resource.
+42             (See the file "res/values/google_maps_api.xml").
+43             Note that the API key is linked to the encryption key used to sign the APK.
+44             You need a different API key for each encryption key, including the release key that is used to
+45             sign the APK for publishing.
+46             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+47        -->
+48        <meta-data
+48-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:32:9-34:55
+49            android:name="com.google.android.geo.API_KEY"
+49-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:33:13-58
+50            android:value="@string/google_maps_key" />
+50-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:34:13-52
+51
+52        <activity
+52-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:36:9-38:68
+53            android:name="com.example.my_app_isaac.MapsActivity"
+53-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:37:13-41
+54            android:label="@string/title_activity_maps" />
+54-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:38:13-56
+55        <activity android:name="com.example.my_app_isaac.Recycler" />
+55-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:39:9-46
+55-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:39:19-43
+56        <activity android:name="com.example.my_app_isaac.ActividadHttp" />
+56-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:40:9-51
+56-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:40:19-48
+57        <activity android:name="com.example.my_app_isaac.Intent_send_parameters" >
+57-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:41:9-50:20
+57-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:41:19-57
+58            <intent-filter>
+58-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:42:13-49:29
+59                <action android:name="android.intent.action.SEND" />
+59-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:43:17-69
+59-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:43:25-66
+60                <action android:name="android.intent.action.ANSWER" />
+60-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:44:17-71
+60-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:44:25-68
+61
+62                <category android:name="android.intent.category.DEFAULT" />
+62-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:46:17-76
+62-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:46:27-73
+63
+64                <data android:mimeType="text/plain" />
+64-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:48:17-55
+64-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:48:23-52
+65            </intent-filter>
+66        </activity>
+67        <activity android:name="com.example.my_app_isaac.List_view_activity" />
+67-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:51:9-56
+67-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:51:19-53
+68        <activity android:name="com.example.my_app_isaac.Second_Activity" />
+68-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:52:9-53
+68-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:52:19-50
+69        <activity android:name="com.example.my_app_isaac.MainActivity" >
+69-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:53:9-59:20
+69-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:53:19-47
+70            <intent-filter>
+70-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:54:13-58:29
+71                <action android:name="android.intent.action.MAIN" />
+71-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:55:17-69
+71-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:55:25-66
+72
+73                <category android:name="android.intent.category.LAUNCHER" />
+73-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:57:17-77
+73-->/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/src/main/AndroidManifest.xml:57:27-74
+74            </intent-filter>
+75        </activity>
+76        <!-- Needs to be explicitly declared on P+ -->
+77        <uses-library
+77-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+78            android:name="org.apache.http.legacy"
+78-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+79            android:required="false" />
+79-->[com.google.android.gms:play-services-maps:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/84d72358cb7edc9162e5c678460a7256/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+80
+81        <activity
+81-->[com.google.android.gms:play-services-base:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/548e9fe7c0dbc0938b6828b2531865ee/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+82            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+82-->[com.google.android.gms:play-services-base:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/548e9fe7c0dbc0938b6828b2531865ee/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+83            android:exported="false"
+83-->[com.google.android.gms:play-services-base:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/548e9fe7c0dbc0938b6828b2531865ee/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+84-->[com.google.android.gms:play-services-base:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/548e9fe7c0dbc0938b6828b2531865ee/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+85
+86        <meta-data
+86-->[com.google.android.gms:play-services-basement:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/1b90b1be4df66705fb91818db0752e78/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+87            android:name="com.google.android.gms.version"
+87-->[com.google.android.gms:play-services-basement:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/1b90b1be4df66705fb91818db0752e78/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+88            android:value="@integer/google_play_services_version" />
+88-->[com.google.android.gms:play-services-basement:17.0.0] /home/isaac/.gradle/caches/transforms-2/files-2.1/1b90b1be4df66705fb91818db0752e78/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+89    </application>
+90
+91</manifest>

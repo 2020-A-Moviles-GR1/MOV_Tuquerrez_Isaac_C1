@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/isaac/AndroidStudioProjects/My_app_isaac/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml",
+            "outputFile": "/home/isaac/GitProjects/MOV_Tuquerrez_Isaac_C1/android/My_app_isaac/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml",
             "map": [
                 {
                     "source": "/home/isaac/.gradle/caches/transforms-2/files-2.1/1b90b1be4df66705fb91818db0752e78/jetified-play-services-basement-17.0.0/res/values-ko/values.xml",
