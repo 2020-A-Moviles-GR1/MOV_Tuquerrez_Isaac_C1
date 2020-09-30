@@ -1,5 +1,6 @@
 package com.example.examenappmobile
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import kotlinx.android.synthetic.main.activity_manage_net.*
 import androidx.appcompat.app.AppCompatActivity
@@ -7,16 +8,17 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.SeekBar
 
-class ManageNet : AppCompatActivity() {
 
+class ManageNet : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manage_net)
-
         txtvSizeNet.text = "Tamaño de Red: ${seekBarNetSize.progress + 1}"
         seekBarNetSize.max = 10
         seekBarNetSize.min = 1
         lstvNets.isClickable = true
+
 
 
         seekBarNetSize?.setOnSeekBarChangeListener(object :
@@ -25,57 +27,60 @@ class ManageNet : AppCompatActivity() {
                 // write custom code for progress is changed
                 txtvSizeNet.text = "Tamaño de Red: ${seekBarNetSize.progress + 1}"
             }
-
-            override fun onStartTrackingTouch(seek: SeekBar) {
-                // write custom code for progress is started
-            }
-
-            override fun onStopTrackingTouch(seek: SeekBar) {
-                // write custom code for progress is stopped
-            }
+            override fun onStartTrackingTouch(seek: SeekBar) { }
+            override fun onStopTrackingTouch(seek: SeekBar) { }
         })
 
+
         val adapter: ArrayAdapter<Net> = ArrayAdapter(this,
-            android.R.layout.simple_list_item_1 ,CompanionSaver.getList())
+            android.R.layout.simple_list_item_1,SailsController.getList())
 
         lstvNets.adapter = adapter
 
         buttonAddNet.setOnClickListener {
             addNet(adapter)
+            adapter.notifyDataSetChanged()
+
         }
 
         buttonDelete.setOnClickListener {
-            if (editTextNumber.text.toString().toInt() - 1 < CompanionSaver.getList()[CompanionSaver.getList().size - 1].getIndex()) {
-                deleteNet(editTextNumber.text.toString().toInt() - 1 ,adapter)
+            if (editTextNumber.text.toString().toInt() - 1 < SailsController.getList()
+                        [SailsController.getList().size - 1].getMyIndex()) {
+                deleteNet(editTextNumber.text.toString().toInt(),adapter)
             }
         }
 
         buttonUpdate.setOnClickListener {
-            if (editTextNumber.text.toString().toInt() - 1 < CompanionSaver.getList()[CompanionSaver.getList().size - 1].getIndex()) {
-                updateNet(editTextNumber.text.toString().toInt() - 1, adapter, editTextTextPersonName.text.toString(), editTextNumberDecimal.text.toString().toFloat())
+            if (editTextNumber.text.toString().toInt() - 1 < SailsController.getList()
+                        [SailsController.getList().size - 1].getMyIndex()) {
+                updateNet(editTextNumber.text.toString().toInt(), adapter,
+                    editTextTextPersonName.text.toString(), editTextNumberDecimal.text.toString())
             }
         }
 
         buttonNode.setOnClickListener {
-            goNodes(editTextNumber.text.toString().toInt() - 1)
+            goNodes(editTextNumber.text.toString().toInt())
         }
 
     }
 
-
     private fun addNet(adapter: ArrayAdapter<Net>){
-        CompanionSaver.addNet(seekBarNetSize.progress)
-        adapter.notifyDataSetChanged()
+        if (SailsController.addNet(seekBarNetSize.progress)){
+
+        } else {
+            addNet(adapter)
+        }
+
     }
 
     private fun deleteNet(index:Int,adapter: ArrayAdapter<Net>){
-        CompanionSaver.deleteNet(index)
+        SailsController.deleteNet(index)
         adapter.notifyDataSetChanged()
     }
 
-    private fun updateNet(index:Int, adapter: ArrayAdapter<Net>, name:String, floatData:Float){
-        CompanionSaver.updateNet(index,
-            CompanionSaver.getNet(index).setNewValues(name,floatData)
+    private fun updateNet(index:Int, adapter: ArrayAdapter<Net>, name:String, myData:String){
+        SailsController.updateNet(index,
+            SailsController.getNet(index).setNewValues(name,myData)
         )
         adapter.notifyDataSetChanged()
     }
@@ -88,6 +93,5 @@ class ManageNet : AppCompatActivity() {
         intentNodes.putExtra("net", index)
         startActivity(intentNodes)
     }
-
 
 }

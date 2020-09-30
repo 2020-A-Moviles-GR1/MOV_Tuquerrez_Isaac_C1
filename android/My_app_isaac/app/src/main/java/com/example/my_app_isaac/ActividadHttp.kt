@@ -72,12 +72,13 @@ class ActividadHttp : AppCompatActivity() {
     fun create_user(){
         val url = urlPrincipal + "Usuario"
         val parametrosUser = listOf(
-            "cedula" to "1104120233",
-            "nombre" to "Willan",
-            "email" to "willantuquerrez@epn.com",
+            "cedula" to "11034204553",
+            "nombre" to "WAFddFV",
+            "email" to "wilrez@epn.com",
             "estadoCivil" to "soltero",
             "password" to "hjk3GgjJJ"
         )
+        Log.i("http-klaxon",parametrosUser.toString())
         url.httpPost(parametrosUser).responseString {
             request, response, result ->
             when(result){

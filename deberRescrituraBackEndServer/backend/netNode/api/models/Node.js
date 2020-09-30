@@ -26,11 +26,20 @@ module.exports = {
       required:true,
       unique:false
     },
+    
+    link:{
+      type:'string',
+      required:true,
+      unique:false
+    },
 
     net:{
       model:'net',
-      required:true
+      required:false,
+      unique:false
     },
+
+    
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
@@ -49,4 +58,3 @@ module.exports = {
   },
 
 };
-
