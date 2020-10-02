@@ -5,11 +5,14 @@ import android.content.Intent
 import kotlinx.android.synthetic.main.activity_manage_net.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.SeekBar
+import kotlin.reflect.typeOf
 
 
 class ManageNet : AppCompatActivity() {
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +22,11 @@ class ManageNet : AppCompatActivity() {
         seekBarNetSize.min = 1
         lstvNets.isClickable = true
 
+        var txt_shared : String? = intent.getStringExtra(Intent.EXTRA_TEXT)
+
+        if (txt_shared != null) {
+            editTextTextLink.setText("$txt_shared")
+        }
 
 
         seekBarNetSize?.setOnSeekBarChangeListener(object :
@@ -54,7 +62,8 @@ class ManageNet : AppCompatActivity() {
             if (editTextNumber.text.toString().toInt() - 1 < SailsController.getList()
                         [SailsController.getList().size - 1].getMyIndex()) {
                 updateNet(editTextNumber.text.toString().toInt(), adapter,
-                    editTextTextPersonName.text.toString(), editTextNumberDecimal.text.toString())
+                    editTextTextPersonName.text.toString(), editTextNumberDecimal.text.toString(),
+                    editTextTextLink.text.toString())
             }
         }
 
@@ -65,9 +74,8 @@ class ManageNet : AppCompatActivity() {
     }
 
     private fun addNet(adapter: ArrayAdapter<Net>){
-        if (SailsController.addNet(seekBarNetSize.progress)){
-
-        } else {
+        Log.i("http netSize", "${seekBarNetSize.progress}")
+        if(!SailsController.addNet(seekBarNetSize.progress, editTextTextLink.text.toString())){
             addNet(adapter)
         }
 
@@ -78,9 +86,9 @@ class ManageNet : AppCompatActivity() {
         adapter.notifyDataSetChanged()
     }
 
-    private fun updateNet(index:Int, adapter: ArrayAdapter<Net>, name:String, myData:String){
+    private fun updateNet(index:Int, adapter: ArrayAdapter<Net>, name:String, myData:String, link:String){
         SailsController.updateNet(index,
-            SailsController.getNet(index).setNewValues(name,myData)
+            SailsController.getNet(index).setNewValues(name, myData, link)
         )
         adapter.notifyDataSetChanged()
     }

@@ -1,5 +1,6 @@
 package com.example.examenappmobile
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -18,5 +19,21 @@ class Nodes : AppCompatActivity() {
             android.R.layout.simple_list_item_1 ,SailsController.getNet(netIndex).getNodeList())
 
         lstvNodes.adapter = adapter
+
+        button.setOnClickListener {
+            goMap(netIndex)
+        }
+
     }
+
+    private fun goMap(index:Int){
+        val intentNode = Intent(
+            this,
+            MapsActivity::class.java
+        )
+        intentNode.putExtra("net", index)
+        startActivity(intentNode)
+
+    }
+
 }
